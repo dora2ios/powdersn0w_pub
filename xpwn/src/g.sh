@@ -19,7 +19,7 @@ sudo chown 0:0 taig/taig
 touch .cydia_no_stash
 sudo chown 0:0 .cydia_no_stash
 
-tar -cvf ../taig83.tar .cydia_no_stash taig/ usr/libexec/CrashHousekeeping
+tar -cvf ../taig83.tar .cydia_no_stash taig/ usr/
 
 cd ..
 sudo rm -rf BUILD
