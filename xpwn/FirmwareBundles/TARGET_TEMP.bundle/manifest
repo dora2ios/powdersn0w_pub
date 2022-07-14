@@ -1,0 +1,14 @@
+LLB.{DeviceClass}.RELEASE.img3
+iBoot.{DeviceClass}.RELEASE.img3
+DeviceTree.{DeviceClass}.img3
+applelogo@2x~{DeviceType}.{epochs}.img3
+recoverymode@{size}~{DeviceType}-{ConnectionType}.{epochs}.img3
+batterylow0@2x~{DeviceType}.{epochs}.img3
+batterylow1@2x~{DeviceType}.{epochs}.img3
+batterycharging0@2x~{DeviceType}.{epochs}.img3
+batterycharging1@2x~{DeviceType}.{epochs}.img3
+glyphplugin@{size}~{DeviceType}-{ConnectionType}.{epochs}.img3
+batteryfull@2x~{DeviceType}.{epochs}.img3
+iBootX.{DeviceClass}.RELEASE.img3
+applelogoX@2x~{DeviceType}.{epochs}.img3
+recoverymodeX@{size}~{DeviceType}-{ConnectionType}.{epochs}.img3

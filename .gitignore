@@ -1,0 +1,10 @@
+
+.DS_Store
+*.a
+xpwn/daibutsu
+xpwn/tools/asr_patcher
+xpwn/tools/iboot_patcher
+xpwn/tools/iboot_tester
+xpwn/tools/kernel_patcher
+xpwn/src/taig83.tar
+xpwn/ipsw
