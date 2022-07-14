@@ -1,21 +1,20 @@
 #ICC		= xcrun -sdk iphoneos clang
 MCC		= clang
-MCC_FLAGS	= -I./include -Os -Wall -Ilib/openssl/include
+MCC_FLAGS	= -I./include -Os -Wall
 
-
-STATIC		= */*.a static/x86_64/*.a
+LIBS		= */*.a -lz -lpng -lbz2 -lcrypto
 
 .PHONY: all test asr iboot kernel common dmg hdutil hfs minizip ipsw-patch build validate ticket daibutsu
 
 all: asr iboot kernel common dmg hdutil hfs minizip ipsw-patch
-	$(MCC) $(MCC_FLAGS) $(STATIC) ipsw-patch/main.c -o ipsw
+	$(MCC) $(MCC_FLAGS) $(LIBS) ipsw-patch/main.c -o ipsw
 	strip ipsw
 
 validate: common minizip ipsw-patch
-	$(MCC) $(MCC_FLAGS) $(STATIC) ipsw-patch/validate.c -o validate
+	$(MCC) $(MCC_FLAGS) $(LIBS) ipsw-patch/validate.c -o validate
 
 ticket: common minizip ipsw-patch
-	$(MCC) $(MCC_FLAGS) $(STATIC) ipsw-patch/ticket.c -o ticket
+	$(MCC) $(MCC_FLAGS) $(LIBS) ipsw-patch/ticket.c -o ticket
 
 asr:
 	cd asr && \
@@ -63,13 +62,13 @@ ipsw-patch:
 	cd ..
 
 test: asr iboot kernel common hfs minizip ipsw-patch
-	$(MCC) $(MCC_FLAGS) $(STATIC) tools/kernel_patcher.c -o tools/kernel_patcher
+	$(MCC) $(MCC_FLAGS) $(LIBS) tools/kernel_patcher.c -o tools/kernel_patcher
 	strip tools/kernel_patcher
-	$(MCC) $(MCC_FLAGS) $(STATIC) tools/iboot_patcher.c -o tools/iboot_patcher
+	$(MCC) $(MCC_FLAGS) $(LIBS) tools/iboot_patcher.c -o tools/iboot_patcher
 	strip tools/iboot_patcher
-	$(MCC) $(MCC_FLAGS) $(STATIC) tools/asr_patcher.c -o tools/asr_patcher
+	$(MCC) $(MCC_FLAGS) $(LIBS) tools/asr_patcher.c -o tools/asr_patcher
 	strip tools/asr_patcher
-	$(MCC) $(MCC_FLAGS) $(STATIC) tools/iboot_tester.c -o tools/iboot_tester
+	$(MCC) $(MCC_FLAGS) $(LIBS) tools/iboot_tester.c -o tools/iboot_tester
 	strip tools/iboot_tester
 
 build: all test
@@ -91,7 +90,7 @@ build: all test
 	mv testbuild_v3.0_alpha4.zip build/
 
 daibutsu: asr iboot kernel common dmg hdutil hfs minizip ipsw-patch
-	$(MCC) $(MCC_FLAGS) $(STATIC) ipsw-patch/daibutsu.c -o daibutsu
+	$(MCC) $(MCC_FLAGS) $(LIBS) ipsw-patch/daibutsu.c -o daibutsu
 	strip daibutsu
 
 clean:

@@ -1,6 +1,6 @@
 #ICC		= xcrun -sdk iphoneos clang
 MCC		= clang
-MCC_FLAGS	= -I../include -Os -Wall -I../lib/openssl/include
+MCC_FLAGS	= -I../include -Os -Wall 
 
 .PHONY: all
 
