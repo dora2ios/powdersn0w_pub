@@ -3,41 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>Filename</key>
-	<string>iPhone5,2_9.2_13C75_Restore.ipsw</string>
-	<key>RootFilesystem</key>
-	<string>058-26174-078.dmg</string>
+	<string>iPhone5,2_7.1_11D167_Restore.ipsw</string>
+	<key>RootFilesSystem</key>
+	<string>058-4447-001.dmg</string>
 	<key>RootFilesystemKey</key>
-	<string>1d3e8a0c8c12338a47e181c3a5932f85c974b0fb244cb981753d135c1ac91bdba584d5a5</string>
+	<string>be03247cb96519b646e5a105d627d18eae6550dee41417356b2be81cb012f8d44c22aa26</string>
 	<key>RootFilesystemSize</key>
-	<integer>2500</integer>
+	<integer>1660</integer>
 	<key>RamdiskOptionsPath</key>
 	<string>/usr/local/share/restore/options.n42.plist</string>
 	<key>SHA256</key>
-	<string>f81f2266b607e0f9626d38add4f975abfff35ac15cd9e07e6af6f0a9e0e976d2</string>
-	<key>FilesystemPackage</key>
+	<string>aa10e4de1934e65fb87a2a80699032f1ce6be19844122c4a13a779b3fde6034d</string>
+	<key>RamdiskExploit</key>
 	<dict>
-		<key>bootstrap</key>
-		<string>src/cydia9.tar</string>
-		<key>package</key>
-		<string>src/ios9.tar</string>
-	</dict>
-	<key>RamdiskPackage</key>
-	<dict>
-		<key>package</key>
-		<string>src/bin.tar</string>
-		<key>ios</key>
-		<string>ios9</string>
+		<key>exploit</key>
+		<string>src/target/iphone5/11D257/exploit</string>
+		<key>inject</key>
+		<string>src/target/iphone5/11D257/partition</string>
 	</dict>
 	<key>Firmware</key>
 	<dict>
 		<key>iBSS</key>
 		<dict>
 			<key>File</key>
-			<string>Firmware/dfu/iBSS.n42.RELEASE.dfu</string>
+			<string>Firmware/dfu/iBSS.n42ap.RELEASE.dfu</string>
 			<key>IV</key>
-			<string>8958d8df5c9facede6263f8820f9c727</string>
+			<string>ffabce967beb456318d313187eea5fe7</string>
 			<key>Key</key>
-			<string>25869acdf7c7510c4322c217694ede0ba070f0fbbd00744f22d5e3b51ed94f05</string>
+			<string>59cb3d755593d75d1b7f448500ba20bd81ae286daf701f00e6baa70ffb992b9e</string>
 			<key>Decrypt</key>
 			<true/>
 			<key>Patch</key>
@@ -46,24 +39,24 @@
 		<key>iBEC</key>
 		<dict>
 			<key>File</key>
-			<string>Firmware/dfu/iBEC.n42.RELEASE.dfu</string>
+			<string>Firmware/dfu/iBEC.n42ap.RELEASE.dfu</string>
 			<key>IV</key>
-			<string>2ad1ac1cfe0da605bae51b8b46511a7c</string>
+			<string>d7f83e0fa6a663a29b93dd30c05b4284</string>
 			<key>Key</key>
-			<string>376275b1a8c51529e69ae01e868c27c1fd2e5637976d9f38935f2bc7bcf52fbd</string>
+			<string>9f18bb565c1b43bb7e9b7cd01538e57b987c1b669e11ce19d80911f0461716a4</string>
 			<key>Decrypt</key>
 			<true/>
 			<key>Patch</key>
 			<true/>
 		</dict>
-		<key>Restore Ramdisk</key>
+		<key>KernelCache</key>
 		<dict>
 			<key>File</key>
-			<string>058-25952-079.dmg</string>
+			<string>kernelcache.release.n42</string>
 			<key>IV</key>
-			<string>680577d3d4df5f30fb8683eca6f5c168</string>
+			<string>3ed402b2d57dae822936f382f6c0f2d8</string>
 			<key>Key</key>
-			<string>88af2c42c037c7126775f169ee8524107b0adde5967cfbff4a2f636efd0d5b7e</string>
+			<string>b57cc6c0a2ace3ab354d1bf73299c6352f2af7016abb9f069958c52c19358d44</string>
 			<key>Decrypt</key>
 			<true/>
 		</dict>
@@ -72,9 +65,9 @@
 			<key>File</key>
 			<string>Firmware/all_flash/all_flash.n42ap.production/DeviceTree.n42ap.img3</string>
 			<key>IV</key>
-			<string>17deec88a49c65151be0bdeda67be6f1</string>
+			<string>bef8293e2aec5f075812f881d7e05730</string>
 			<key>Key</key>
-			<string>d1255b69f1fc1fcc9acb91e8d6b0883f987b358583513ff5ea03b6e6fe7e1cd5</string>
+			<string>4e18178c2658200a4c02fb6383cc4637e29ae46054ac5a2dbc2cde775bfbc6f3</string>
 			<key>DecryptPath</key>
 			<string>Downgrade/DeviceTree.n42ap.img3</string>
 		</dict>
@@ -83,36 +76,27 @@
 			<key>File</key>
 			<string>Firmware/all_flash/all_flash.n42ap.production/applelogo@2x~iphone.s5l8950x.img3</string>
 			<key>IV</key>
-			<string>db177ef07de5b295a59e89ae82b34722</string>
+			<string>82691defa82e9cc2e493632b9cf9e546</string>
 			<key>Key</key>
-			<string>81fabf8a84cd5fd86a5f16fa6c817d8378ae42c409516737c21f3b96e6d7ef1a</string>
+			<string>bacdd381e9b5933c66e5bae528d608f2499126ba4d6b376382f9b3d26e7391cf</string>
 			<key>DecryptPath</key>
 			<string>Downgrade/applelogo@2x~iphone.s5l8950x.img3</string>
 		</dict>
-		<key>KernelCache</key>
+		<key>Restore Ramdisk</key>
 		<dict>
 			<key>File</key>
-			<string>kernelcache.release.n42</string>
+			<string>058-4276-001.dmg</string>
 			<key>IV</key>
-			<string>6771fec5b750e13aa6d571121fd6bba6</string>
+			<string>7d1605e9f8379fe18561eb4e2a31ca39</string>
 			<key>Key</key>
-			<string>ad8c000be0bc1553ffda113d565345e128d9b9e1f64194043ef03b21f6844e2f</string>
+			<string>c382b6218c416b0349479ca757d836957e1854c7abae396e249dd8fa330badc8</string>
 			<key>Decrypt</key>
-			<true/>
-			<key>DecryptPath</key>
-			<string>Downgrade/kernelcache.release.n42</string>
-			<key>Patch</key>
 			<true/>
 		</dict>
 	</dict>
-	<key>FirmwareReplace</key>
+	<key>FirmwarePath</key>
 	<dict>
 		<key>AppleLogo</key>
-		<dict>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/applelogo7@2x~iphone.s5l8950x.img3</string>
-		</dict>
-		<key>NewAppleLogo</key>
 		<dict>
 			<key>File</key>
 			<string>Firmware/all_flash/all_flash.n42ap.production/applelogo@2x~iphone.s5l8950x.img3</string>
@@ -150,38 +134,17 @@
 		<key>RecoveryMode</key>
 		<dict>
 			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/recoverymode7@1136~iphone-lightning.s5l8950x.img3</string>
-		</dict>
-		<key>NewRecoveryMode</key>
-		<dict>
-			<key>File</key>
 			<string>Firmware/all_flash/all_flash.n42ap.production/recoverymode@1136~iphone-lightning.s5l8950x.img3</string>
 		</dict>
 		<key>LLB</key>
 		<dict>
 			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/LLB.n42.RELEASE.img3</string>
+			<string>Firmware/all_flash/all_flash.n42ap.production/LLB.n42ap.RELEASE.img3</string>
 		</dict>
 		<key>iBoot</key>
 		<dict>
 			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/iBoot.n42.RELEASE.img3</string>
-		</dict>
-		<key>NewiBoot</key>
-		<dict>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/iBoot9.n42.RELEASE.img3</string>
-			<key>IV</key>
-			<string>809117c933e30063fdbef74484af8f6d</string>
-			<key>Key</key>
-			<string>43dd2a62ca1bc2ab9dd80237f65d0fcc345bfa8b4b687126974c292fed7de455</string>
-		</dict>
-		<key>manifest</key>
-		<dict>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/manifest</string>
-			<key>manifest</key>
-			<string>manifest</string>
+			<string>Firmware/all_flash/all_flash.n42ap.production/iBoot.n42ap.RELEASE.img3</string>
 		</dict>
 	</dict>
 </dict>
