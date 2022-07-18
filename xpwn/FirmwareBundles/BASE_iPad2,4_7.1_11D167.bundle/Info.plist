@@ -12,8 +12,8 @@
 	<string>1af1daa2c9d178e65af62a597e9fca76706a6ecf16cd73a8e2dd329a591bea786c82b26b</string>
 	<key>RootFilesystemSize</key>
 	<integer>1660</integer>
-	<key>SHA1</key>
-	<string>61bf92c0bcde9ed0f790bea2425a078640d8bcb7</string>
+	<key>SHA256</key>
+	<string>61c03ee2a812b54213ed180ea6869e195b36aa175911c9d99923e4b073d742be</string>
 	<key>RamdiskExploit</key>
 	<dict>
 		<key>exploit</key>
