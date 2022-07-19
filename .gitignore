@@ -11,4 +11,4 @@ xpwn/ipsw
 mylibs/
 mybuild/
 Makefile
-testbuild_*.zip
+testbuild_*
