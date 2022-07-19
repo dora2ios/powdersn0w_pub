@@ -1497,7 +1497,8 @@ uint32_t find_vm_map_enter_patch(uint32_t region, uint8_t* kdata, size_t ksize)
 // NOP out the BICNE.W instruction with 4 here.
 uint32_t find_vm_map_protect_patch(uint32_t region, uint8_t* kdata, size_t ksize)
 {
-    const struct find_search_mask search_masks[] =
+    
+    const struct find_search_mask search_masks_a6[] =
     {
         {0xFBF0, 0xF010}, // TST.W   Rx, #0x20000000
         {0x8F00, 0x0F00},
@@ -1513,7 +1514,26 @@ uint32_t find_vm_map_protect_patch(uint32_t region, uint8_t* kdata, size_t ksize
         //{0xFFF0, 0xBF00}, // IT      EQ
     };
     
-    uint16_t* insn = find_with_search_mask(region, kdata, ksize, sizeof(search_masks) / sizeof(*search_masks), search_masks);
+    const struct find_search_mask search_masks_a5[] =
+    {
+        {0xFBF0, 0xF010}, // TST.W   Rx, #0x20000000
+        {0x8F00, 0x0F00},
+        {0xFFC0, 0x6840}, // LDR     Rz, [Ry,#4]
+        {0xFFC0, 0x68C0}, // LDR     Rs, [Ry,#0xC]
+        {0xFF00, 0x4600}, // MOV     Rx, Ry (?)
+        {0xFFF0, 0xF000}, // AND.W   Ry, Rk, #6
+        {0xF0FF, 0x0006},
+        {0xFFF0, 0xBF00}, // IT      EQ (?)
+        {0xFFF0, 0xF020}, // BICNE.W Rk, Rk, #4
+        {0xF0FF, 0x0004}
+        //{0xF8FF, 0x2806}, // CMP     Ry, #6
+        //{0xFFF0, 0xBF00}, // IT      EQ
+    };
+    
+    uint16_t* insn = find_with_search_mask(region, kdata, ksize, sizeof(search_masks_a6) / sizeof(*search_masks_a6), search_masks_a6);
+    if(!insn)
+        insn = find_with_search_mask(region, kdata, ksize, sizeof(search_masks_a5) / sizeof(*search_masks_a6), search_masks_a5);
+    
     if(!insn)
         return 0;
     
