@@ -8,3 +8,7 @@ xpwn/tools/iboot_tester
 xpwn/tools/kernel_patcher
 xpwn/src/taig83.tar
 xpwn/ipsw
+mylibs/
+mybuild/
+Makefile
+testbuild_*

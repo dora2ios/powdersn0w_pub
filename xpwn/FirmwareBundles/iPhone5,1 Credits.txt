@@ -1,1 +1,0 @@
-The iPhone5,1 bundles were created by verygenericname. LeoI07 removed the extra files from the 6.1.4 bundle and the -v boot arg from the Info.plist in it.
