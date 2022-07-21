@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Filename</key>
-	<string>iPhone4,1_7.1.2_11D257_Restore.ipsw</string>
+	<string>iPhone4,1_7.1_11D167_Restore.ipsw</string>
 	<key>RootFilesystem</key>
-	<string>058-4365-009.dmg</string>
+	<string>058-4365-001.dmg</string>
 	<key>RootFilesystemKey</key>
-	<string>9147090b03e8f0888e74676c6a23eacd8c857ea26b7824c06563dbc1e9040857aa2e8253</string>
+	<string>b4f9bd3dbe2b37693da72d39e22b57aebbd7276af072376384a1eccf0fdc6d3be37af0f0</string>
 	<key>RootFilesystemSize</key>
 	<integer>1660</integer>
 	<key>RamdiskOptionsPath</key>
 	<string>/usr/local/share/restore/options.n94.plist</string>
 	<key>SHA256</key>
-	<string>dcef047bfad3ffb47d278a734c30c4905948193dafceed2423610ea7887ecc13</string>
+	<string>1a4be18ac8997aefe365feaa90508757cbf0bc3dff3ff11971bb3c2ed328e668</string>
 	<key>RamdiskExploit</key>
 	<dict>
 		<key>exploit</key>
