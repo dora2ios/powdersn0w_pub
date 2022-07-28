@@ -192,12 +192,12 @@ static int init_kernel(unsigned char* buf, struct macho_address **addr)
             
             if(text_last < last_section+0x100) {
                 ERROR("[%s] ayyyy", __FUNCTION__);
-                if(text_last < last_section+0xC0) {
+                if(text_last < last_section+0xE0) {
                     ERROR("[%s] wtf1?!", __FUNCTION__);
                     goto end;
                 } else {
                     last_section += 0xE0;
-                    last_section = (last_section & ~0x1F);
+                    last_section = (last_section & ~0xDF);
                 }
             } else {
                 last_section += 0x100;
